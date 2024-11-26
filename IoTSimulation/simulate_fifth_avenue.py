@@ -3,7 +3,7 @@ import random
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Replace with your IoT Hub device connection string for Fifth Avenue
-CONNECTION_STRING = "HostName=assignment2iot.azure-devices.net;DeviceId=FifthAvenue;SharedAccessKey=qDhFrK0jMUyNubgwlasiN9xJqltPALZONkHyzQCmj4g="
+CONNECTION_STRING = "HostName=Iothubassignment2.azure-devices.net;DeviceId=FifthAveDevice;SharedAccessKey=QTVuhIg1BtASU/nveK2COwWfz3osBVdy2Ig4lK97+xE="
 
 def get_telemetry():
     return {

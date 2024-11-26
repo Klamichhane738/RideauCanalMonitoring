@@ -3,7 +3,7 @@ import random
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Replace with your IoT Hub device connection string for NAC
-CONNECTION_STRING = "HostName=assignment2iot.azure-devices.net;DeviceId=NAC;SharedAccessKey=j462YA/VwrJvJ4Vz+CtFm+yiV2kmUgF0uhJhDoq9ag4="
+CONNECTION_STRING = "HostName=Iothubassignment2.azure-devices.net;DeviceId=NACDevice;SharedAccessKey=TTeUrN+rs61P7qnhJggrsykarHBivKIinsiuKSakSZ0="
 
 def get_telemetry():
     return {

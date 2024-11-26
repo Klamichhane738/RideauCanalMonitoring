@@ -3,7 +3,7 @@ import random
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Replace with your IoT Hub device connection string for Dow's Lake
-CONNECTION_STRING = "HostName=assignment2iot.azure-devices.net;DeviceId=DowsLakeSensor;SharedAccessKey=30y1ehbmMnTmOs3nJph++aulH52TItKkmIOLDwlPTCs="
+CONNECTION_STRING = "HostName=Iothubassignment2.azure-devices.net;DeviceId=DowLakeDevice;SharedAccessKey=Skm3CbM0NXMRBTyTBPn1ro0ik4gJGYeAC6u6nFTZJqM="
 
 def get_telemetry():
     return {
