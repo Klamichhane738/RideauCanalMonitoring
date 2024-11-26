@@ -143,17 +143,18 @@ Install the azure-iot-device library to simulate sensor data. Run the following 
 Go to the Query tab and replace the default query with the following:
 
    ```sql
-      SELECT
-            input.location AS Location,
-            AVG(input.iceThickness) AS AvgIceThickness,
-            MAX(input.snowAccumulation) AS MaxSnowAccumulation,
-            System.Timestamp AS EventTime
-      INTO
-            [output]
-      FROM
-            [input]
-      GROUP BY
-            input.location, TumblingWindow(second, 300)
+   SELECT
+    input.location AS Location,
+    AVG(input.iceThickness) AS AvgIceThickness,
+    MAX(input.snowAccumulation) AS MaxSnowAccumulation,
+    System.Timestamp AS EventTime
+   INTO
+    [iotoutput]
+   FROM
+    [iotinput] AS input
+   GROUP BY
+    input.location, 
+    TumblingWindow(Duration(second, 300))
 ```
 #### 5. Save and Start the Job
 Save the query and click Start on the Stream Analytics job.
@@ -184,8 +185,8 @@ Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device 
 #### 2. Azure Blob Storage
 
 - **Data Organization**:
-  - Processed data is stored in JSON format under the `processed-data/` container.
-  - File naming convention: `YYYY-MM-DD_HH-MM.json`.
+  - Processed data is stored in JSON format under the `iotcontainer/` container.
+  - File naming convention: `Filename.json`.
 
 
 #### 3. Configuring Azure Services
@@ -195,7 +196,7 @@ Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device 
 
 #### 4. Accessing Stored Data
 1. Navigate to the Azure Blob Storage account.
-2. Locate the `processed-data/` container.
+2. Locate the `iotcontainer/` container.
 3. Download and view the JSON files.
 
 ### Results
@@ -212,6 +213,8 @@ Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device 
   - Average ice thickness.
   - Maximum snow accumulation.
   - Timestamp of the event.
+
+![alt text](<screenshots/Azure Blob output/Screenshot (2495).png>)
 
 ## Reflection
 ### Challenges:
