@@ -159,6 +159,8 @@ Go to the Query tab and replace the default query with the following:
 #### 5. Save and Start the Job
 Save the query and click Start on the Stream Analytics job.
 
+![alt text](<screenshots/Stream Analytics/Screenshot (2485).png>)
+
 ###  Usage Instructions
 
 #### 1. Running IoT Sensor Simulation
@@ -181,7 +183,7 @@ python sensor_fifth_avenue.py
 Open the script in a text editor.
 Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device connection string.
 
-
+![alt text](<screenshots/Iot Hub Configuration/Screenshot (2473).png>)
 #### 2. Azure Blob Storage
 
 - **Data Organization**:
@@ -198,6 +200,8 @@ Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device 
 1. Navigate to the Azure Blob Storage account.
 2. Locate the `iotcontainer/` container.
 3. Download and view the JSON files.
+
+![alt text](<screenshots/Azure Blob output/Screenshot (2493).png>)
 
 ### Results
 - **Example Output JSON**:
@@ -231,3 +235,5 @@ Replace the CONNECTION_STRING variable with the respective Azure IoT Hub device 
 
 ---
 This README provides a complete overview and step-by-step guide to replicate the Rideau Canal Skateway Monitoring System.
+
+### Note: All other relevalent screenshots are stored under Screenshots folder.
