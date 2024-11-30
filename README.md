@@ -19,11 +19,7 @@ The system processes real-time data using the following components:
 
 ### **Architecture Diagram**
 
-```mermaid
-graph TD
-    IoT_Sensors_Simulation["IoT Sensors Simulation<br>(Simulated IoT Sensors)"] --> Azure_IoT_Hub["Azure IoT Hub<br>(Receives JSON Data)"]
-    Azure_IoT_Hub --> Azure_Stream_Analytics["Azure Stream Analytics<br>(Processes Data: Averages & Max Values)"]
-    Azure_Stream_Analytics --> Azure_Blob_Storage["Azure Blob Storage<br>(Stores Processed Data in JSON Format)"]
+![AzureIoThub drawio](https://github.com/user-attachments/assets/5d537896-ddd4-45c2-b60d-d4d64ddd937c)
 
 ```
 
